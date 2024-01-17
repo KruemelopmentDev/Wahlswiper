@@ -23,5 +23,3 @@ Es wird jquery benötigt für den Wahlswiper. [Hier herunterladen](https://jquer
 #Styling
 
 In der swiper.css sind oben sehr viele Variablen definiert für alle möglichen Farben um das Design leicht anzupassen.
-
-überall klasse wahlswiper davor
