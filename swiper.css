@@ -1,0 +1,695 @@
+:root {
+  --card-bg-color: #5dc0d9;
+  --back-button-arrow-color: #fff;
+  --back-button-bg-color: #2a6f97;
+  --back-button-bg-color-disabled: #575757;
+  --next-button-arrow-color: #fff;
+  --next-button-bg-color: #2a6f97;
+  --next-button-bg-color-disabled: #575757;
+  --question-count-text-color: #000;
+  --question-heading-text-color: #000;
+  --question-text-color: #000;
+  --double-weight-text-color: #000;
+  --no-button-bg-color: #2a6f97;
+  --no-button-bg-dark-color: #014f86;
+  --no-icon-color: #ff595e;
+  --yes-button-bg-color: #2a6f97;
+  --yes-button-bg-dark-color: #014f86;
+  --yes-icon-color: #06d6a0;
+  --neutral-button-bg-color: #2a6f97;
+  --neutral-button-bg-dark-color: #014f86;
+  --neutral-text-color: #fff;
+  --check-tick-color: #fff;
+  --check-bg-color: #2a6f97;
+  --check-outline-color: #b9b8c3;
+  --dislike-bg-color: #ff0000;
+  --like-bg-color: #06d6a0;
+  --neutral-bg-color: #dadada;
+
+  --resultbar-thumb-color: #014f86;
+  --resultbar-track-color: #2a6f97;
+  --resultbar-track-bg-color: #eeeeee;
+  --resultbar-thumb-text-color: #fff;
+
+  --answers-question-text-color: #fff;
+  --answers-top-bg-color: #2a6f97;
+  --answers-bot-bg-color: #2a6f97;
+  --answers-arrow-color: #fff;
+  --answers-partyname-text-color: #fff;
+  --answers-short-answer-text-color: #fff;
+  --answers-reason-text-color: #fff;
+  --answers-long-answer-text-color: #fff;
+  --answers-item-width: 500px;
+
+  --card-height: 500px;
+}
+
+.wahlswiper #card {
+  height: var(--card-height);
+}
+.wahlswiper #questionCount {
+  margin: auto;
+  color: var(--question-count-text-color);
+}
+.wahlswiper .questionHeadline {
+  color: var(--question-heading-text-color);
+  text-align: center;
+  margin-top: 0;
+}
+.wahlswiper .question {
+  color: var(--question-text-color);
+  text-align: center;
+}
+.wahlswiper .submitbtnsmall {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  background: var(--primary-dark-color);
+  position: relative;
+  top: 0;
+  padding: 7.5px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 0px 0px var(--primary-dark-hover-color),
+    0px 0px 10px 0px #bbb;
+  transition: all 0.2s;
+}
+
+.wahlswiper #like {
+  background: var(--yes-button-bg-color);
+  box-shadow: 0px 10px 0px 0px var(--yes-button-bg-dark-color),
+    0px 0px 20px 0px #bbb;
+}
+.wahlswiper #like:active {
+  top: 8px;
+  box-shadow: 0px 5px 0px 0px var(--yes-button-bg-dark-color);
+}
+
+.wahlswiper #skip {
+  background: var(--neutral-button-bg-color);
+  box-shadow: 0px 10px 0px 0px var(--neutral-button-bg-dark-color),
+    0px 0px 20px 0px #bbb;
+  color: var(--neutral-text-color);
+}
+.wahlswiper #skip:active {
+  top: 8px;
+  box-shadow: 0px 5px 0px 0px var(--neutral-button-bg-dark-color);
+}
+.wahlswiper #dismiss {
+  background: var(--no-button-bg-color);
+  box-shadow: 0px 10px 0px 0px var(--no-button-bg-dark-color),
+    0px 0px 20px 0px #bbb;
+}
+.wahlswiper #dismiss:active {
+  top: 8px;
+  box-shadow: 0px 5px 0px 0px var(--no-button-bg-dark-color);
+}
+.wahlswiper .submitbtnsmall:active {
+  top: 4px;
+  box-shadow: 0px 2.5px 0px 0px var(--primary-dark-hover-color);
+}
+
+.wahlswiper .check {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 30px;
+  width: 15px;
+  border-bottom: 6px solid var(--yes-icon-color);
+  border-right: 6px solid var(--yes-icon-color);
+  position: absolute;
+  top: 7px;
+  left: 18px;
+}
+
+.wahlswiper .close {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 1;
+}
+
+.wahlswiper .close:before,
+.wahlswiper .close:after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 26px;
+  height: 40px;
+  width: 6px;
+  background-color: var(--no-icon-color);
+}
+
+.wahlswiper .close:before {
+  transform: rotate(45deg);
+}
+
+.wahlswiper .close:after {
+  transform: rotate(-45deg);
+}
+
+.wahlswiper .decidebuttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.wahlswiper .decidebuttons .button {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  border: 0;
+  display: inline-block;
+  margin: 0 8px;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.wahlswiper .decidebuttons .skipbutton {
+  border-radius: 20px;
+  display: flex;
+  margin: 0 8px;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  border-collapse: separate;
+}
+
+.wahlswiper .decidebuttons .skipbutton p {
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;
+  padding: 10px;
+}
+.wahlswiper #buttonBack {
+  background-color: var(--back-button-bg-color);
+}
+
+.wahlswiper #buttonBack.disabled {
+  background-color: var(--back-button-bg-color-disabled);
+}
+.wahlswiper #buttonBack::before {
+  border-color: var(--back-button-arrow-color);
+}
+.wahlswiper #buttonForward {
+  background-color: var(--next-button-bg-color);
+}
+
+.wahlswiper #buttonForward.disabled {
+  background-color: var(--next-button-bg-color-disabled);
+}
+
+.wahlswiper #buttonForward::before {
+  border-color: var(--next-button-arrow-color);
+}
+.wahlswiper #doubleweight {
+  color: var(--double-weight-text-color);
+}
+
+.wahlswiper .cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+.wahlswiper .cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+
+.wahlswiper .cbx span:first-child {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid var(--check-outline-color);
+  transition: all 0.2s ease;
+}
+
+.wahlswiper .cbx span:first-child svg {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 6px;
+  fill: none;
+  stroke: var(--check-tick-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+  width: 12px;
+  height: 9px;
+}
+
+.wahlswiper .cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--check-bg-color);
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+  transition-delay: 0.2s;
+}
+
+.wahlswiper .cbx span:last-child {
+  margin-left: 8px;
+}
+
+.wahlswiper .cbx span:last-child:after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: var(--check-outline-color);
+  transform-origin: 0 0;
+  transform: scaleX(0);
+}
+
+.wahlswiper .cbx:hover span:first-child {
+  border-color: var(--check-bg-color);
+}
+
+.wahlswiper .inp-cbx:checked + .cbx span:first-child {
+  border-color: var(--check-bg-color);
+  background: var(--check-bg-color);
+  animation: check 0.6s ease;
+}
+
+.wahlswiper .inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+
+.wahlswiper .inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(2.2);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+@keyframes check {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.wahlswiper .swipeevent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wahlswiper .demo__content {
+  overflow: hidden;
+  position: relative;
+  padding-top: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wahlswiper .demo__card-cont {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.wahlswiper .demo__card {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 100%;
+}
+
+.wahlswiper .demo__card.reset {
+  transition: transform 0.3s;
+  transform: translateX(0) !important;
+}
+
+.wahlswiper .demo__card.reset .demo__card__choice {
+  transition: opacity 0.3s;
+  opacity: 0 !important;
+}
+
+.wahlswiper .demo__card.inactive {
+  transition: transform 0.3s;
+}
+
+.wahlswiper .demo__card.inactive2 {
+  transition: transform 0.8s;
+}
+
+.wahlswiper .demo__card__choice.buttonanimate {
+  transition: transform 0.3s;
+}
+
+.wahlswiper .demo__card__choice.opacity {
+  opacity: 1;
+}
+
+.wahlswiper .demo__card.to-left {
+  transform: translateX(-100vw) rotate(-30deg) !important;
+}
+
+.wahlswiper .demo__card.from-left {
+  left: -100vw;
+}
+
+.wahlswiper .demo__card.from-leftanim {
+  transform: translateX(100vw) !important;
+}
+
+.wahlswiper .demo__card.to-right {
+  transform: translateX(100vw) rotate(30deg) !important;
+}
+
+.wahlswiper .demo__card.from-right {
+  left: 100vw;
+}
+
+.wahlswiper .demo__card.from-rightanim {
+  transform: translateX(-100vw) !important;
+}
+
+.wahlswiper .demo__card.to-top {
+  transform: translateY(-100vh) rotate(0deg) !important;
+}
+
+.wahlswiper .demo__card.from-top {
+  top: -100vh;
+}
+
+.wahlswiper .demo__card.from-topanim {
+  transform: translateY(100vh) !important;
+}
+
+.wahlswiper .demo__card.hide {
+  display: none;
+}
+
+.wahlswiper .demo__card__top {
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--card-bg-color);
+}
+
+.wahlswiper .demo__card__choice {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 20px;
+}
+
+.wahlswiper .demo__card__choice.m--reject {
+  background: var(--dislike-bg-color);
+}
+
+.wahlswiper .demo__card__choice.m--like {
+  background: var(--like-bg-color);
+}
+
+.wahlswiper .demo__card__choice.m--neutral {
+  background: var(--neutral-bg-color);
+}
+
+.wahlswiper .demo__card__choice.m--like:after {
+  transform: scaleY(-1);
+}
+
+.wahlswiper .demo__card__drag {
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 95%;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.wahlswiper .chevron::before {
+  border-style: solid;
+  border-color: #fff;
+  border-width: 5px 5px 0 0;
+  content: "";
+  display: inline-block;
+  height: 9px;
+  left: 10px;
+  position: relative;
+  top: 12.5px;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 9px;
+}
+
+.wahlswiper .chevron.right:before {
+  transform: rotate(45deg);
+}
+
+.wahlswiper .chevron.left:before {
+  left: 15px;
+  transform: rotate(-135deg);
+}
+
+.wahlswiper .chevron.down:before {
+  transform: rotate(135deg);
+  transition: transform 0.5s ease-in;
+}
+
+.wahlswiper .chevronbutton {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: 0;
+  background: var(--primary-color);
+  display: inline-block;
+  margin: 0 8px;
+  position: relative;
+  cursor: pointer;
+}
+
+.wahlswiper .chevronbutton.disabled {
+  filter: grayscale(100%);
+}
+
+.wahlswiper .resultbar {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 35px;
+  background-color: var(--resultbar-track-bg-color);
+  border-radius: 400px;
+}
+
+.wahlswiper .resultbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--resultbar-thumb-text-color);
+  border-radius: 400px;
+  background: var(--resultbar-thumb-color);
+}
+
+.wahlswiper .resultbar-title span {
+  padding: 0 20px;
+  height: 35px;
+  line-height: 35px;
+}
+
+.wahlswiper .resultbar-bar {
+  height: 35px;
+  width: 0;
+  border-radius: 400px;
+  background-color: var(--resultbar-track-color);
+}
+
+.wahlswiper .resultbar-percent {
+  position: absolute;
+  right: calc(10% + 10px);
+  top: 0;
+  font-size: 15px;
+  height: 35px;
+  line-height: 35px;
+  color: #000;
+  margin-right: 10px;
+}
+
+.wahlswiper .questionanswers {
+  width: 100%;
+}
+
+.wahlswiper .questionitem {
+  color: var(--answers-question-text-color);
+  background: var(--answers-top-bg-color);
+  border-radius: 20px;
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 5;
+  margin-bottom: 20px;
+}
+
+.wahlswiper .questionchevron {
+  position: absolute;
+  right: 50px;
+  top: calc(50% - 1.5em);
+  margin: auto 0;
+}
+
+.wahlswiper .questionchevron.spin::before {
+  transform: rotate(315deg);
+  transition: transform 0.5s ease-out;
+}
+
+.wahlswiper .subquestionitem {
+  height: 0;
+  overflow: hidden;
+  overflow-x: auto;
+  display: none;
+  margin-top: -60px;
+  margin-bottom: 20px;
+  flex-direction: row;
+  border-radius: 20px;
+}
+
+.wahlswiper .subquestionitem.show {
+  height: auto;
+  display: flex;
+}
+
+.wahlswiper .subquestionitemhalf {
+  width: var(--answers-item-width);
+  padding: 10px;
+  padding-top: 40px;
+  position: relative;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.wahlswiper .seperatorvertical {
+  border-left: 2px solid white;
+  height: 100%;
+}
+
+.wahlswiper .transparentbg {
+  opacity: 0.7;
+  background-color: var(--answers-bot-bg-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.wahlswiper .itemtext {
+  text-align: center;
+  word-break: normal;
+  padding: 10px;
+}
+.wahlswiper .itemtext.text1 {
+  color: var(--answers-partyname-text-color);
+}
+.wahlswiper .itemtext.text2 {
+  color: var(--answers-short-answer-text-color);
+}
+.wahlswiper .itemtext.text3 {
+  color: var(--answers-reason-text-color);
+}
+.wahlswiper .itemtext.text4 {
+  color: var(--answers-long-answer-text-color);
+}
+.wahlswiper .inputwrapper {
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 100;
+}
+
+.wahlswiper .submitbtn {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin-top: 20px;
+  position: relative;
+  top: 0px;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: auto;
+}
+
+.wahlswiper .flex {
+  display: flex;
+}
+.wahlswiper .center {
+  justify-content: center;
+}
+.wahlswiper .itemcenter {
+  align-items: center;
+}
+.wahlswiper .textcenter {
+  text-align: center;
+}
+.wahlswiper .botmargin {
+  margin-bottom: 20px;
+}
+.wahlswiper .img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: middle;
+}
+.wahlswiper .questionWrapper {
+  padding: 10px;
+}
+.wahlswiper .thumb {
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  padding: 50px;
+}
+.wahlswiper .rotate180 {
+  transform: rotate(180deg);
+}
+.wahlswiper .rotate270 {
+  transform: rotate(270deg);
+}
+.wahlswiper .nopadding {
+  padding: 0;
+}

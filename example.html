@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Wahlswiper</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Jugendstammtisch Sebnitz" />
+    <meta name="description" content="Wahlswiper" />
+    <link rel="stylesheet" href="swiper.css" />
+    <meta name="msapplication-TileColor" content="#014f86" />
+    <meta name="theme-color" content="#014f86" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#014f86" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+
+  <body>
+    <div id="wrapper"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="swiper.js"></script>
+    <script>
+      $(document).ready(function () {
+        const answers = [
+          [
+            {
+              short_answer: 2,
+              long_answer: "Joa, das ist eine gute Idee",
+            },
+            {
+              short_answer: 0,
+              long_answer: "Joa, das ist eine doofe Idee",
+            },
+          ],
+          [
+            {
+              short_answer: 0,
+              long_answer: "Find ich nicht gut.",
+            },
+            {
+              short_answer: 2,
+              long_answer: "Sollten wir machen",
+            },
+          ],
+        ];
+        const parties = ["Party1", "Party2"];
+        const swiper = new WahlSwiper(
+          [
+            {
+              question:
+                "Sollen alle geeigneten kommunalen Dachflächen mit Photovoltaikanlagen ausgestattet werden?",
+              imageURL: null,
+            },
+            {
+              question: "Soll Sebnitz ein Carsharing-Projekt initiieren?",
+              imageURL: null,
+            },
+          ],
+          parties,
+          answers
+        );
+        swiper.createCards("wrapper");
+      });
+    </script>
+  </body>
+</html>
