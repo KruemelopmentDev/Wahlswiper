@@ -1,8 +1,8 @@
-#Vorraussetzungen
+# Vorraussetzungen
 
 Es wird jquery benötigt für den Wahlswiper. [Hier herunterladen](https://jquery.com)
 
-#Setup
+# Setup
 
 ```
     $(document).ready(function() {
@@ -20,6 +20,6 @@ Es wird jquery benötigt für den Wahlswiper. [Hier herunterladen](https://jquer
     short_answer = Antwort auf die Frage (0=nein,1=neutral,2=ja), long_answer = Freitext mit Antwort auf die Frage
 ```
 
-#Styling
+# Styling
 
 In der swiper.css sind oben sehr viele Variablen definiert für alle möglichen Farben um das Design leicht anzupassen.
