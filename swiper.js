@@ -462,7 +462,7 @@ function WahlSwiper(questions, parties, answers) {
               <p style="margin-right: 60px;">Frage ` +
         (i + 1) +
         `: ` +
-        questions[i]["question"] +
+        questions[questions.length - 1 - i]["question"] +
         `</p>
             <p class="chevron down questionchevron" id="questionarrow` +
         (i + 1) +
